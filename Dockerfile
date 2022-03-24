@@ -1,12 +1,12 @@
 FROM node:lts-alpine
 
-ENV NODE_PATH "/usr/local/lib/node_modules"
+ARG BUILD_DATE
+ARG VCS_REF
 
-ENV NODE_ENV "production"
-
-ENV MQTT_HOST ""
-
-ENV MQTT_TOPIC ""
+ENV NODE_PATH="/usr/local/lib/node_modules" \
+    NODE_ENV="production" \
+    MQTT_HOST="" \
+    MQTT_TOPIC=""
 
 ADD . /app
 
