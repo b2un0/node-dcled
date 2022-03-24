@@ -13,7 +13,7 @@ ADD . /app
 WORKDIR /app
 
 RUN apk add --no-cache --virtual .gyp \
-        python \
+        python3 \
         make \
         libc-dev \
         g++ \
