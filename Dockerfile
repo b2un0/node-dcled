@@ -2,6 +2,7 @@ FROM node:lts-alpine
 
 ARG BUILD_DATE
 ARG VCS_REF
+ARG VERSION
 
 ENV NODE_PATH="/usr/local/lib/node_modules" \
     NODE_ENV="production" \
@@ -32,4 +33,5 @@ SHELL ["/bin/ash"]
 
 LABEL org.opencontainers.image.created=${BUILD_DATE} \
       org.opencontainers.image.revision=${VCS_REF} \
+      org.opencontainers.image.version=${VERSION} \
       org.opencontainers.image.source="https://github.com/b2un0/node-dcled"
