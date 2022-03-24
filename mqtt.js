@@ -29,6 +29,8 @@ client.on('message', (topic, message) => {
         payload.text = 'err';
     }
 
+    console.log(payload);
+
     screen.addText(payload.text, payload.align ? payload.align : 0);
 
     board.update(screen);

@@ -28,6 +28,8 @@ RUN apk add --no-cache --virtual .gyp \
 
 CMD ["node", "mqtt.js"]
 
+SHELL ["/bin/ash"]
+
 LABEL org.opencontainers.image.created=${BUILD_DATE} \
       org.opencontainers.image.revision=${VCS_REF} \
       org.opencontainers.image.source="https://github.com/b2un0/node-dcled"
