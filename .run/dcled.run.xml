@@ -3,10 +3,8 @@
     <deployment type="dockerfile">
       <settings>
         <option name="imageTag" value="b2un0/dcled:dev" />
-        <option name="buildCliOptions" value="" />
-        <option name="command" value="" />
+        <option name="command" value="tail -f /dev/null" />
         <option name="containerName" value="dcled" />
-        <option name="entrypoint" value="" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
@@ -19,7 +17,6 @@
             </DockerEnvVarImpl>
           </list>
         </option>
-        <option name="commandLineOptions" value="" />
         <option name="sourceFilePath" value="Dockerfile" />
       </settings>
     </deployment>

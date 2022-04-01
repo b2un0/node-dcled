@@ -4,9 +4,11 @@
 This is a NodeJS driver/framework for the `Dream Cheeky USB Message Board`.
 It contains preinstalled plugins for weather, clock and Bitcoin exchange rate. Custom plugins can be easily written.
 
+![](https://img.shields.io/github/license/b2un0/node-dcled.svg)
 ![](https://img.shields.io/docker/pulls/b2un0/dcled.svg)
+![](https://img.shields.io/docker/stars/b2un0/dcled.svg)
 ![](https://img.shields.io/docker/image-size/b2un0/dcled.svg)
-![](https://github.com/b2un0/dcled/workflows/docker/badge.svg)
+![](https://github.com/b2un0/dcled/workflows/container/badge.svg)
 
 
 ### run examples
@@ -46,8 +48,10 @@ services:
         container_name: dcled
         network_mode: bridge
         devices:
-            - /dev/bus/usb:/dev/bus/usb
+            - /dev/bus/usb
         environment:
+            NODE_HID_DRIVER: "libusb"
+            DCLED_DEVICE_NUMBER: "0"
             MQTT_HOST: "mqtt://192.168.1.2:1883"
             # MQTT_HOST: "mqtt://USERNAME@PASSWORD:192.168.1.2:1883"
             MQTT_TOPIC: "home/dcled"
