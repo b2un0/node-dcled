@@ -20,9 +20,11 @@ class dcled {
     }
 
     connect() {
+        HID.setDriverType(process.env.NODE_HID_DRIVER ?? 'hidraw')
+
         let devices = HID.devices(0x1d34, 0x0013);
         if (devices.length) {
-            this.device = new HID.HID(devices[0].path);
+            this.device = new HID.HID(devices[process.env.DCLED_DEVICE_NUMBER ?? '0'].path);
 
             if (this.connectInterval) {
                 clearInterval(this.connectInterval);
