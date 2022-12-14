@@ -1,6 +1,6 @@
 {
   "name": "dcled",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "node implementation to control the awesome Dream Cheeky USB Message Board",
   "author": "Merten Peetz <dev@morbz.net> (https://dev.morbz.de)",
@@ -17,10 +17,10 @@
     "dcled.js"
   ],
   "dependencies": {
-    "node-hid": "^2.1.1"
+    "node-hid": "^2.1.2"
   },
   "devDependencies": {
-    "node-fetch": "^3.2.3"
+    "node-fetch": "^3.3.0"
   },
   "engines": {
     "node": ">= 12"
