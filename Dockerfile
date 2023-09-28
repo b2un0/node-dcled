@@ -18,8 +18,10 @@ RUN apk add --no-cache --virtual .gyp \
         libusb-dev \
         eudev-dev \
         linux-headers \
+        && yarn global add node-gyp \
         && yarn install \
         && yarn add mqtt \
+        && yarn global remove node-gyp \
         && apk del .gyp \
         && apk add --no-cache eudev libusb
 
